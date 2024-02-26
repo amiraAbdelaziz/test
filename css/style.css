@@ -1,0 +1,628 @@
+:root {
+    --blue: #3f51b5;
+    --yellow: #f0c569;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* header start */
+header {
+    background: var(--blue);
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    text-align: center;
+    padding: 5px 120px;
+}
+header img {
+    width: 11%;
+    height: 100px;
+    margin-top: 5px;
+}
+header p {
+    padding-top: 7px;
+    margin-bottom: 0;
+}
+header span {
+    color: var(--yellow);
+}
+header a {
+    text-transform: capitalize;
+    margin: 0;
+}
+/* header end */
+
+/* content start */
+.content {
+    direction: rtl;
+    padding: 50px 20px ;
+    position: relative;
+    background-color: #f0c5691f;
+}
+.content::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("images/cards.jpg");
+    background-size: cover;
+    z-index: -1;
+    filter: blur(12px);
+}
+
+
+h3 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+}
+h3::before {
+    position: absolute;
+    content: "";
+    border: 4px solid;
+    border-color: var(--blue) transparent transparent var(--blue);
+    width: 30px;
+    height: 30px;
+    top: -2px;
+    left: 572px;
+}
+h3::after {
+    position: absolute;
+    content: "";
+    border: 4px solid;
+    border-color: transparent var(--yellow) var(--yellow) transparent;
+    width: 30px;
+    height: 30px;
+    bottom: -11px;
+    right: 569px;
+}
+/* cards */
+.cards {
+    width: 50%;
+    margin: 50px 328px 0;
+    border: 3px solid var(--yellow);
+    padding: 20px 20px 0;
+    background-color: #f0c56934;
+}
+
+.card {
+    margin-bottom: 20px;
+    background: transparent;
+    border: none;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.num h5 {
+    margin-right: 30px;
+}
+.number p {
+    text-align: center;
+    margin-right: 30px;
+    width: 50px;
+}
+
+
+.head {
+    background-color: var(--blue);
+    color: white;
+    padding: 2px 20px;
+}
+.head h5 {
+    font-weight: 400;
+    margin-top: 3px;
+}
+.body {
+    padding: 20px;
+    color: black;
+}
+
+
+footer {
+    padding: 15px 0 0;
+    background-color: var(--blue);
+}
+
+
+.contact img {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.contact p {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 15px;
+    width: 70px;
+    color: white;
+}
+a {
+    color: black;
+    text-decoration: none;
+    margin-right: 60px;
+}
+
+hr {
+    color: white;
+    margin-top: 0;
+    height: 2px;
+}
+
+.last{
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+.last a {
+    font-size: 10px;
+    color: var(--yellow);
+}
+
+@media (min-width: 320px) {
+    header {
+        padding: 0 10px;
+    }
+    header img {
+        width: 22%;
+        height: 22%;
+    }
+    header p {
+        font-size: 10px;
+        padding-top: 12px;
+        margin-bottom: -8px;
+    }
+    header a {
+        font-size: 10px;
+    }
+
+    .content {
+        padding-bottom: 0;
+    }
+    .content::before {
+        filter: blur(3px);
+        display: block;
+    }
+
+    h3 {
+        font-weight: 600;
+        font-size: 25px;
+    }
+    h3::before {
+        width: 25px;
+        height: 25px;
+        top: -2px;
+        left: 70px;
+    }
+    h3::after {
+        width: 25px;
+        height: 25px;
+        bottom: -8px;
+        right: 70px;
+    }
+
+    .cards {
+        margin: 50px auto 30px;
+        width: 90%; 
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        margin-right: -10px;
+    }
+    h5 {
+        font-size: 15px;
+    }
+
+    .num h5 {
+        margin-left: 5px;
+    }
+    .number p {
+        width: 28px;
+    }
+    .number .pr {
+        margin-left: -15px;
+    }
+    .number .u {
+        margin-left: 15px;
+    }
+
+    .head {
+        padding: 0 10px;
+    }
+    .body {
+        font-size: 10px;
+        margin-right: -10px;
+    }
+    .body hr {
+        color: var(--blue);
+        width: 200px;
+        margin-right: -15px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    .contact img {
+        width: 15px;
+        height: 15px;
+        margin-right: 0px;
+        margin-left: 3px;
+    }
+    .contact p {
+        font-size: 10px;
+        font-weight: 400;
+    }
+
+    .contact a {
+        width: 100px;
+        margin-left: 5px;
+    }
+
+    .last {
+        font-size: 10px;
+        padding: 5px 0 0;
+        margin-top: -15px;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 375px) {
+    header img {
+        width: 20%;
+    }
+    h3::before {
+        left: 98px;
+        width: 25px;
+        height: 25px;
+    }
+    h3::after {
+        right: 98px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .body {
+        font-size: 11px;
+    }
+    .body hr {
+        width: 250px;
+    }
+
+    .number p {
+        width: 32px;
+    }
+}
+
+@media (min-width: 425px) {
+    header p {
+        font-size: 12px;
+        margin-bottom: -4px;
+    }
+    header a {
+        font-size: 12px;
+    }
+    h3::before {
+        left: 120px;
+    }
+    h3::after {
+        right: 120px;
+    }
+
+    .body {
+        font-size: 13px;
+    }
+    .body hr {
+        width: 300px;
+    }
+
+    .num  h5 {
+        margin-left: 10px;
+    }
+    .number p {
+        width: 38px;
+    }
+
+    .contact img {
+        width: 18px;
+        height: 18px;
+    }
+    .contact p {
+        font-weight: 500;
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    header img {
+        width: 15%;
+    }
+    header p {
+        font-size: 15px;
+        margin-bottom: -2px;
+    }
+    header a {
+        font-size: 15px;
+    }
+
+    .content::before {
+        filter: blur(5px);
+    }
+
+    h3 {
+        font-weight: 700;
+    }
+    h3::before {
+        left: 290px;
+    }
+    h3::after {
+        right: 290px;
+    }
+
+    .cards {
+        width: 70%;
+    }
+
+    .head {
+        font-weight: 600;
+    }
+    h5 {
+        font-size: 17px;
+    }
+
+    .body {
+        font-size: 15px;
+    }
+    .body hr {
+        display: none;   
+    }
+
+    .number p {
+        width: 45px;
+    }
+
+    .contact img {
+        width: 18px;
+        height: 18px;
+    }
+    .contact p {
+        font-weight: 500;
+        font-size: 10px;
+    }
+
+    footer {
+        padding: 20px 200px;
+    }
+
+}
+
+
+/* @media (min-width: 1024px) {
+
+    header p {
+        font-size: 20px;
+        margin-bottom: 2px;
+        margin-top: 5px;
+    }
+    header a {
+        font-size: 17px;
+    }
+
+    .content::before {
+        filter: blur(8px);
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 30px;
+    }
+    h3::before {
+        left: 400px;
+        width: 35px;
+        height: 35px;
+    }
+    h3::after {
+        right: 400px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .cards {
+        width: 50%;
+    }
+
+    .head {
+        font-weight: 600;
+    }
+    h5 {
+        font-size: 20px;
+    }
+
+    .body {
+        font-size: 15px;
+    }
+    .body hr {
+        display: none;   
+    }
+
+    .number p {
+        width: 50px;
+    }
+
+    .contact img {
+        width: 20px;
+        height: 20px;
+    }
+    .contact p {
+        font-size: 12px;
+    }
+
+    footer {
+        padding: 20px 200px;
+    }
+
+}
+
+@media (min-width: 1440px) {
+    header {
+        padding: 5px 20px;
+    }
+    header img {
+        width: 10%;
+    }
+    header p {
+        font-size: 20px;
+        margin-bottom: 2px;
+        margin-top: 5px;
+    }
+    header a {
+        font-size: 17px;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 30px;
+    }
+    h3::before {
+        left: 610px;
+        width: 35px;
+        height: 35px;
+    }
+    h3::after {
+        right: 610px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .cards {
+        width: 50%;
+    }
+
+    .head {
+        font-weight: 600;
+    }
+    h5 {
+        font-size: 19px;
+    }
+
+    .body {
+        font-size: 17px;
+    }
+    .body hr {
+        display: none;   
+    }
+
+    .number p {
+        width: 50px;
+    }
+
+    .contact img {
+        width: 20px;
+        height: 20px;
+    }
+    .contact p {
+        font-size: 12px;
+    }
+
+    footer {
+        padding: 20px 200px;
+    }
+
+}
+
+@media (min-width: 2560px) {
+    header {
+        padding: 5px 20px;
+    }
+    header img {
+        width: 10%;
+    }
+    header p {
+        font-size: 35px;
+        margin-bottom: 12px;
+        margin-top: 5px;
+    }
+    header a {
+        font-size: 30px;
+        margin-right: 15px;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 40px;
+    }
+    h3::before {
+        left: 1150px;
+        width: 40px;
+        height: 40px;
+    }
+    h3::after {
+        right: 1150px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .cards {
+        width: 30%;
+    }
+
+    h1 {
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+    .head {
+        font-weight: 600;
+    }
+    h5 {
+        font-size: 30px;
+    }
+
+    .body {
+        font-size: 30px;
+    }
+    .body hr {
+        display: none;   
+    }
+
+    .number p {
+        width: 100px;
+    }
+    .number .u {
+        margin-right: -170px;
+    }
+    .number .pr {
+        margin-right: 50px;
+    }
+
+
+    .contact img {
+        width: 40px;
+        height: 40px;
+    }
+    .contact p {
+        font-size: 20px;
+        width: 116px;
+    }
+
+    footer {
+        padding: 20px 200px;
+    }
+
+} */
